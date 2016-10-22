@@ -1,0 +1,10 @@
+title: Write the Docs SF workshop
+description: A website showing GitHub Pages
+baseurl: "/write-the-docs"
+
+# Build settings
+markdown: kramdown
+theme: minima
+
+exclude:
+- README.md
