@@ -1,6 +1,6 @@
-title: Write the Docs SF workshop
+title: My website
 description: A website showing GitHub Pages
-baseurl: "/write-the-docs"
+# baseurl: "/write-the-docs"
 
 # Build settings
 markdown: kramdown
