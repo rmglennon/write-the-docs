@@ -1,8 +1,14 @@
 # Learn GitHub by building a documentation website
 
-In this workshop, you will get started with the GitHub flow by creating a website that is powered by the free hosting service from GitHub, called GitHub Pages.
+GitHub is a website that enables people to collaborate on projects, and many organizations use it for managing both software code and documentation. You will get started with GitHub by applying its tools to creating a website.
 
-You will fork a repository, add some files and content to it, open a pull request, merge files, and enable GitHub Pages.
+In this tutorial, you will:
+
+- Get an introduction to the Git version control system, terminology, and the GitHub workflow.
+- Create a simple website with the free hosting service from GitHub, called GitHub Pages.
+- Learn how you can take your new skills and to support other open-source projects.
+
+In GitHub terms, you will fork a repository, add some files and content to it, open a pull request, merge files, and enable GitHub Pages to create your website.
 
 To complete the tutorial, you need a [GitHub account](https://help.github.com/articles/signing-up-for-a-new-github-account/), a browser, and an internet connection.
 
@@ -33,7 +39,7 @@ _Tip: Sometimes, you may want to download a copy of a repository to your local m
 
 ## Explore the files
 
-In this tutorial, you will be using solely the GitHub website to modify the files.
+In this tutorial, you will be using the GitHub website to modify the files.
 
 1. Look at the files in your forked repository. These files include information about the repository's license, files to ignore (for example, your operating system creates certain files as you browse, and these should not be tracked with your project), a readme, and a `docs` folder.
 2. Double-click the `docs` folder to display its contents. It contains a `css` folder, which imports a visual theme for the website you will create, and `_config.yml`.
@@ -77,13 +83,13 @@ You can think of the _master branch_ as being the production version of your pro
 3. Click `Create a new branch for this commit and start a pull request.`
 4. GitHub automatically suggests a branch name based on your username. You can use it or type your own, such as `new-index-file`.
 
-  ![Commit new file](images/index-file-commit.png)
+  ![Commit new file](images/index-file-commit-small.png)
 
 5. Click `Propose new file`.
   The page refreshes and you are on a page where you can open a pull request to propose your changes be merged into the master branch. The subject of the pull request is the commit message you typed before.
 6. Add some additional information about your the changes you are proposing in the comment box, such as `This adds an index file to create the homepage for the website.`
 
-  ![Open a pull request page](images/open-pull-request.png)
+  ![Open a pull request page](images/open-pull-request-small.png)
 
 7. Scroll the page and review the other information displayed on the pull request. For example, you can see the list of commits (there is only one) and the changes you made.
 8. Click `Create pull request`.
@@ -100,11 +106,11 @@ In this case, you are the only contributor and need to review your own changes.
 
 1. Review the information on the pull request page.
 
-  ![Pull request page](images/pull-request-page.png)
+  ![Pull request page](images/pull-request-page-small.png)
 
 2. Below the merge section, type a comment and click `Comment`. Comments are used to discuss the changes. You can use emoji and markdown in your comments.
 
-  ![Add a comment to a pull request](images/pull-request-add-comment.png)
+  ![Add a comment to a pull request](images/pull-request-add-comment-small.png)
 
 3. Click `Merge pull request`. Your changes do not conflict with the master branch, so you can merge automatically. If there were conflicts, you need to reconcile them by choosing whether to keep the master version or your edits. You may need to use command-line options to review and fix merge conflicts.
 4. Click `Confirm merge`.
