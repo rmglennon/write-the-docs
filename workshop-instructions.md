@@ -6,13 +6,13 @@ You will fork a repository, add some files and content to it, open a pull reques
 
 To complete the tutorial, you need a [GitHub account](https://help.github.com/articles/signing-up-for-a-new-github-account/), a browser, and an internet connection.
 
-## Learn the terms
+## Get to know the terms
 
 While this tutorial assumes some knowledge of basic computing terms, you may not be familiar with the concepts for Git and GitHub. To get started, review the following terms.
 
-[`Git`](https://en.wikipedia.org/wiki/Git) is software that enables multiple people to work together on a project. It was developed by [Linus Torvalds](https://en.wikipedia.org/wiki/Linus_Torvalds), who created the Linux kernel that is used in Linux, macOS, Android, and other operating systems.
+_[Git](https://en.wikipedia.org/wiki/Git)_ is software that enables multiple people to work together on a project. It was developed by [Linus Torvalds](https://en.wikipedia.org/wiki/Linus_Torvalds), who created the Linux kernel that is used in Linux, macOS, Android, and other operating systems.
 
-[`GitHub`](https://github.com) is a website where you use Git tools to collaborate on a project.
+_[GitHub](https://github.com)_ is a website where you use Git tools to collaborate on a project.
 
 You can think of a _repository_ as the folder for a project, which contains all of the component files, such as code, documentation, and examples. Open-source software uses public repositories that are visible on the GitHub website.
 
@@ -47,7 +47,9 @@ _Tip: The site template and layouts you are using are from a theme called Minima
 Your fork has the basic configuration to get a website built with Jekyll, but does not have any content in it. You need to create an index file to serve as the homepage of your website.
 
 1. Be sure you are in the  `docs` folder (the path should be `write-the-docs/docs`) and click `Create new file`.
-![Create new file button](images/create-new-file-button.png)
+
+  ![Create new file button](images/create-new-file-button.png)
+
 2. In the `Name your file` box, type `index.md`. This creates a new markdown file. It is very important that you include the `.md` file extension in the name; otherwise, your website will not be generated.
   _Tip: If you ever need to create a new subfolder in your directory structure, you can type the folder name and a `/` after it, and then the filename._
 3. On the `Edit new file` tab, add the following text.
@@ -74,6 +76,7 @@ You can think of the _master branch_ as being the production version of your pro
 2. In the first box, type `Create website index file`. This is a commit message, which is useful for explaining your work and helps you keep track of the changes. If you do not add any text, GitHub includes a default message.
 3. Click `Create a new branch for this commit and start a pull request.`
 4. GitHub automatically suggests a branch name based on your username. You can use it or type your own, such as `new-index-file`.
+
   ![Commit new file](images/index-file-commit.png)
 
 5. Click `Propose new file`.
@@ -81,6 +84,7 @@ You can think of the _master branch_ as being the production version of your pro
 6. Add some additional information about your the changes you are proposing in the comment box, such as `This adds an index file to create the homepage for the website.`
 
   ![Open a pull request page](images/open-pull-request.png)
+
 7. Scroll the page and review the other information displayed on the pull request. For example, you can see the list of commits (there is only one) and the changes you made.
 8. Click `Create pull request`.
 
@@ -97,17 +101,20 @@ In this case, you are the only contributor and need to review your own changes.
 1. Review the information on the pull request page.
 
   ![Pull request page](images/pull-request-page.png)
+
 2. Below the merge section, type a comment and click `Comment`. Comments are used to discuss the changes. You can use emoji and markdown in your comments.
 
   ![Add a comment to a pull request](images/pull-request-add-comment.png)
+
 3. Click `Merge pull request`. Your changes do not conflict with the master branch, so you can merge automatically. If there were conflicts, you need to reconcile them by choosing whether to keep the master version or your edits. You may need to use command-line options to review and fix merge conflicts.
 4. Click `Confirm merge`.
 5. Click `Delete branch` to remove the temporary branch you made to add the index file.
+
   ![Delete the old branch](images/pull-request-delete-branch.png)
 
 You have now merged your changes into the master branch, and the pull request status shows as `Merged`. Congratulations if this was your first pull request!
 
-## Enable GitHub Pages on this repository
+## Enable GitHub Pages on the repository
 
 [GitHub Pages](https://help.github.com/articles/what-is-github-pages/) is a free website-hosting service for repositories stored on GitHub. You can use GitHub pages for a variety of projects, including your personal blog or a corporate website.
 
@@ -121,6 +128,7 @@ The option to use the `docs` folder, which is what you will be doing, allows you
 1. Click `Settings` near the top of the page.
 
   ![Repository settings button](images/repository-settings-button.png)
+
 2. On the main `Options` tab, scroll to the `GitHub Pages` section.
 3. Under `Source`, click `master branch /docs folder`.
 
@@ -140,11 +148,13 @@ You are going to replace the "Hello, world!" text with real content. You can cop
 1. Go back to your GitHub repository.
 2. In the root level of the repository, find and open the file named `XXXXXXXXX`.
 3. Click the `Raw` button to view the raw text, including the markdown formatting tags.
-    ![View the raw file content](images/raw-button.png)
+
+  ![View the raw file content](images/raw-button.png)
 
 4. Select all the text and copy it.
 5. Navigate to the `index.md` file in the `docs` folder.
 6. Click `Edit this file`.
+
   ![Start editing the file](images/edit-this-text-button.png)
 
 7. Delete the "Hello, world!" text, making sure to leave in place the front matter section above it.
@@ -174,7 +184,7 @@ _Tip: If you want to remove your GitHub Pages site or delete the repository, ope
 
 Now that you are familiar with using GitHub, you can use this same workflow to collaborate on the many open-source projects that are hosted there.
 
-Documentation can be an easy way to get started contributing to a project. For example, if you find a typographic error in a documentation page and can locate the source file, you can suggest a fix and become a contributor to the project. In fact, if you click the `Edit this file` button, GitHub automatically creates a fork that you can edit and opens a pull request on the original project. 
+Documentation can be an easy way to get started contributing to a project. For example, if you find a typographic error in a documentation page and can locate the source file, you can suggest a fix and become a contributor to the project. In fact, if you click the `Edit this file` button, GitHub automatically creates a fork that you can edit and opens a pull request on the original project.
 
 If you find a bug or have suggestions for a project but are unable or do not want to make them yourself, report an _issue_ in the repository to notify the contributors. You can also use the issues list to find known problems that you may be able to fix, which are often tagged with `help wanted`.
 
