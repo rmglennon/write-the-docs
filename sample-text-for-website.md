@@ -18,16 +18,20 @@ You can follow these general instructions to make a website with GitHub Pages.
 5. Go to the repository settings and enable GitHub Pages on the master branch.
 6. Open browser to the page.
 
-## Markdown examples
+## Common markdown examples
 
 `#` for headings.
-Backticks around `code`.
-*Asterisks* around bold text.
-_Underscores_ for italics.
+
+Backticks around inline `code`.
+
+Two `**` **asterisks** around bold text.
+
+Add `_` _underscores_ for italics.
 
 ### List examples
 
-Put items in an unordered list with hyphens.
+Put items in an unordered list with hyphens, asterisks, or plus signs.
+
 ```
 - Item 1
 - Item 2
@@ -38,7 +42,7 @@ Displays like this:
 - Item 1
 - Item 2
 
-Use numbers for ordered lists. The numbers do not need to be in order; you could use `1.` for all and they will display properly on the output.
+Use a number with a period for ordered list items. You could use `1.` for all and they will display properly on the output.
 
 ```
 1. Item 1
@@ -49,3 +53,13 @@ Displays like this:
 
 1. Item 1
 1. Item 2
+
+### Links and images examples
+
+`[Text that displays in the link](https://github.com)` looks like [Text that displays in the link](https://github.com).
+
+To add an image:
+
+`![alt text for image](https://octodex.github.com/images/collabocats.jpg)` looks like
+
+![alt text for image](https://octodex.github.com/images/collabocats.jpg)
