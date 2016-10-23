@@ -1,4 +1,4 @@
-# Learn GitHub by building a documentation website
+# Tutorial: Learn GitHub by building a website
 
 GitHub is a website that enables people to collaborate on projects, and many organizations use it for managing both software code and documentation. You will get started with GitHub by applying its tools to creating a website.
 
@@ -67,7 +67,7 @@ Your fork has the basic configuration to get a website built with Jekyll, but do
   ```
   ---
   layout: default
-  title: Workshop instructions
+  title: Home
   ---
 
   Hello, world!
