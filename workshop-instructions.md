@@ -24,14 +24,17 @@ You can think of a _repository_ as the folder for a project, which contains all 
 
 To work on a project, you need to make your own _branch_ of a repository, which is a parallel version that contains your changes. When you are done working, you can propose that your changes be added into the main, or _master branch_ of the project by opening a _pull request_. Other _collaborators_ who have write access to the project can review and approve your work.
 
-## Copy the files into your own account
+## Copy the files to your account
 
 You will start by making a copy of the tutorial data files. You need to do this because you do not have write permissions the source version, but you can if you make copy in your own account. This is known as creating a _fork_, or _forking a repository_.
 
 1. Open a browser to https://github.com and sign in with your account.
 2. Navigate to https://github.com/rmglennon/write-the-docs, which contains some files to get you started.
 4. Click the `Fork` button in the top right corner of the page.
-5. If you are a member of a GitHub _organization_, which is a group of users, you need to choose where to place the forked repository. In most cases, you should choose the option that will put the copy into your own, personal account.
+
+  ![Fork a repository button](images/fork-repository-button.png)
+
+5. You may be prompted where to place the forked repository. Choose the option that will put the copy into your personal account, rather than forking it into any _organization_ to which you belong. An organization is a group of users on GitHub.
 
 You now have a copy of the files that you can edit. If you look at the repository name, it shows the name of the location from which it was forked.
 
@@ -39,12 +42,14 @@ _Tip: Sometimes, you may want to download a copy of a repository to your local m
 
 ## Explore the files
 
-In this tutorial, you will be using the GitHub website to modify the files.
+In this tutorial, you are going to use the GitHub website to modify the files. These files include information about the repository's license, files to ignore (for example, your operating system creates certain files as you browse, and these should not be tracked with your project), a readme, and a `docs` folder.
 
-1. Look at the files in your forked repository. These files include information about the repository's license, files to ignore (for example, your operating system creates certain files as you browse, and these should not be tracked with your project), a readme, and a `docs` folder.
-2. Double-click the `docs` folder to display its contents. It contains a `css` folder, which imports a visual theme for the website you will create, and `_config.yml`.
+1. Look at the files in your forked repository.
+2. Double-click the `docs` folder to display its contents. It contains a `css` folder, which imports a visual theme for the website you will create, and `_config.yml` to set configure the website.
 
-These files are used with a software library known as [Jekyll](https://jekyllrb.com/) that converts text files, such as the markdown files you see here, into a static website or blog. Jekyll is very flexible and can be configured in many ways, and you can [review the documentation](https://jekyllrb.com/docs/home/) to learn more about how to customize it for your site.
+  ![Files in the repository](images/repo-files-css-config.png)
+
+These files are used with a software library known as [Jekyll](https://jekyllrb.com/) that converts text files, such as the markdown files you see here, into a static website or blog. Jekyll is very flexible, and you can [review the documentation](https://jekyllrb.com/docs/home/) to learn more about how to customize it for your site.
 
 _Tip: The site template and layouts you are using are from a theme called Minima, which is the built-in style for Jekyll. You can see an example and view the open-source code in the [Minima repository](https://github.com/jekyll/minima)._
 
@@ -70,7 +75,7 @@ Your fork has the basic configuration to get a website built with Jekyll, but do
 
 The text between the two lines of hyphens (`---`) is metadata, known as front matter, that Jekyll processes to display the page. You can use variables and other options in the front matter to customize your site.
 
-Here, you are setting the page layout and giving the page a title. The content that comes after this is what is displayed on your page (Hello, world!).
+In this tutorial, you are setting the page layout and giving the page a title. The content that comes after this is what is displayed on your page (Hello, world!).
 
 ## Open a pull request for your edits
 
