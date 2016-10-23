@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Workshop instructions
+title: Home
 ---
 
 # My GitHub Pages site
