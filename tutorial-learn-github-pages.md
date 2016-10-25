@@ -66,7 +66,6 @@ Markdown is a lightweight markup language that uses plain text with symbols, lik
   ![Create new file button](images/create-new-file-button.png)
 
 2. In the `Name your file` box, type `index.md`. It is very important that you include the `.md` file extension in the name; otherwise, your website will not be generated.
-  _Tip: If you ever need to create a new subfolder in your directory structure, you can type the folder name and a `/` after it, and then the filename._
 3. On the `Edit new file` tab, add all the following text.
   ```
   ---
@@ -80,6 +79,8 @@ Markdown is a lightweight markup language that uses plain text with symbols, lik
 The text between the two lines of hyphens (`---`) is metadata, known as front matter, that Jekyll processes to display the page. You can use variables and other options in the front matter to customize your site.
 
 You are setting the page layout and giving the page a title. The content that comes after this is what is displayed on your page (Hello, world!).
+
+ _Tip: If you ever need to create a new subfolder in your directory structure when you are creating a file, you can type the folder name and a `/` after it, and then the filename._
 
 ## Open a pull request for your edits
 
@@ -164,8 +165,6 @@ After the page loads, your should have a formatted website with one page, a head
 You next can replace the "Hello, world!" text with real content. You can copy text from a sample markdown file in this repository and paste it into your index file.
 
 1. Go back to your GitHub repository.
-2. In the root level of the repository, find and open the file named [sample-text-for-website.md](https://github.com/rmglennon/write-the-docs/blob/master/sample-text-for-website.md).
-3. Click the `Raw` button to view the raw text, including the markdown formatting tags.
 2. In the root level of the repository, find and open the file named `sample-text-for-website.md`.
 3. Click the `Raw` button to view the plain text, including the markdown formatting.
 
