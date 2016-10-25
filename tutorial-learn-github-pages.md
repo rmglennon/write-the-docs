@@ -157,7 +157,7 @@ After the page loads, your should have a formatted website with one page, a head
 You are going to replace the "Hello, world!" text with real content. You can copy and paste text from a sample markdown file in this repository.
 
 1. Go back to your GitHub repository.
-2. In the root level of the repository, find and open the file named `XXXXXXXXX`.
+2. In the root level of the repository, find and open the file named [sample-text-for-website.md](https://github.com/rmglennon/write-the-docs/blob/master/sample-text-for-website.md).
 3. Click the `Raw` button to view the raw text, including the markdown formatting tags.
 
   ![View the raw file content](images/raw-button.png)
