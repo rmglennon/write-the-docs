@@ -8,25 +8,27 @@ In this tutorial, you will:
 - Create a simple website with the free hosting service from GitHub, called GitHub Pages.
 - Learn how you can take your new skills and to support other open-source projects.
 
-In GitHub terms, you will fork a repository, add some files and content to it, open a pull request, merge files, and enable GitHub Pages to create your website.
-
 To complete the tutorial, you need a [GitHub account](https://help.github.com/articles/signing-up-for-a-new-github-account/), a browser, and an internet connection.
 
 ## Get to know the terms
 
-While this tutorial assumes some knowledge of basic computing terms, you may not be familiar with the concepts for Git and GitHub. To get started, review the following terms.
+While this tutorial assumes some knowledge of basic computing, you may not be familiar with the concepts for Git and GitHub. Here are some of the terms you will encounter in this tutorial.
 
-_[Git](https://en.wikipedia.org/wiki/Git)_ is software that enables multiple people to work together on a project. It was developed by [Linus Torvalds](https://en.wikipedia.org/wiki/Linus_Torvalds), who created the Linux kernel that is used in Linux, macOS, Android, and other operating systems.
+_[Git](https://en.wikipedia.org/wiki/Git)_ is a version-control software library that tracks revisions and manages changes to files. It was developed by [Linus Torvalds](https://en.wikipedia.org/wiki/Linus_Torvalds), who created the Linux kernel that is used in Linux, Android, and other operating systems.
 
-_[GitHub](https://github.com)_ is a website where you use Git tools to collaborate on a project.
+_[GitHub](https://github.com)_ is a website where you use Git tools to collaborate with other people working on a project. GitHub has the file history functionality from Git, and adds some of its own features.
 
-You can think of a _repository_ as the folder for a project, which contains all of the component files, such as code, documentation, and examples. Open-source software uses public repositories that are visible on the GitHub website.
+You can think of a Git _repository_ as the folder for your project that contains all the component files, such as code, documentation, and examples. You can store your repositories on GitHub, where they can be publicly visible (open source) or be private and only accessible to certain users.
 
-To work on a project, you need to make your own _branch_ of a repository, which is a parallel version that contains your changes. When you are done working, you can propose that your changes be added into the main, or _master branch_ of the project by opening a _pull request_. Other _collaborators_ who have write access to the project can review and approve your work.
+When you start working on a project, you need to make your own _branch_ of a repository, which is a parallel version that contains your changes. As you make modifications, like adding or deleting lines of code or files, you save, or _commit_, your changes.
+
+To propose integrating your commits into the production version of the project, known as the _master branch_, you open a _pull request_. A pull request is the way you start a discussion with others about your changes. Other _collaborators_ on the project can review and approve your work. After your pull request is _merged_, your changes are added to the master branch.
+
+You can review the [GitHub Glossary](https://help.github.com/articles/github-glossary/) to learn more about common terms.
 
 ## Copy the files to your account
 
-You will start by making a copy of the tutorial data files. You need to do this because you do not have write permissions the source version, but you can if you make copy in your own account. This is known as creating a _fork_, or _forking a repository_.
+To get started, you need to make a copy of the repository containing the tutorial data files. You do not have write permissions the source version, but making a copy into your own GitHub account allows you to edit them. This is known as creating a _fork_, or _forking a repository_.
 
 1. Open a browser to https://github.com and sign in with your account.
 2. Navigate to https://github.com/rmglennon/write-the-docs, which contains some files to get you started.
@@ -36,20 +38,20 @@ You will start by making a copy of the tutorial data files. You need to do this 
 
 5. You may be prompted where to place the forked repository. Choose the option that will put the copy into your personal account, rather than forking it into any _organization_ to which you belong. An organization is a group of users on GitHub.
 
-You now have a copy of the files that you can edit. If you look at the repository name, it shows the name of the location from which it was forked.
+You now have a copy of the repository that you can edit. If you look at the repository name, it shows the name of the source repository from which it was forked.
 
 _Tip: Sometimes, you may want to download a copy of a repository to your local machine. Doing this allows you to work offline, use more sophisticated editing tools, such as a text editor or integrated development environment, and work with git through a [command-line interface](https://git-scm.com/book/en/v2/Getting-Started-The-Command-Line). These workflows are beyond the scope of the tutorial._
 
 ## Explore the files
 
-In this tutorial, you are going to use the GitHub website to modify the files. These files include information about the repository's license, files to ignore (for example, your operating system creates certain files as you browse, and these should not be tracked with your project), a readme, and a `docs` folder.
+The files provided for the tutorial include information about the repository's license, some markdown documents, and a `docs` folder.
 
 1. Look at the files in your forked repository.
-2. Double-click the `docs` folder to display its contents. It contains a `css` folder, which imports a visual theme for the website you will create, and `_config.yml` to set configure the website.
+2. Click the `docs` folder to display its contents. It contains a `css` folder, which imports a visual theme for the website you will create, and `_config.yml` to set up the website.
 
   ![Files in the repository](images/repo-files-css-config.png)
 
-These files are used with a software library known as [Jekyll](https://jekyllrb.com/) that converts text files, such as the markdown files you see here, into a static website or blog. Jekyll is very flexible, and you can [review the documentation](https://jekyllrb.com/docs/home/) to learn more about how to customize it for your site.
+The files currently in the `docs` folder are used with [Jekyll](https://jekyllrb.com/), a software library written in Ruby that converts text files, such as the markdown files you see here, into a static website or blog. Jekyll is very flexible, and you can [review the documentation](https://jekyllrb.com/docs/home/) to learn more about how to customize it for your site. [GitHub Pages](https://pages.github.com/), which the free website hosting service you are using in this tutorial, is powered by Jekyll.
 
 _Tip: The site template and layouts you are using are from a theme called Minima, which is the built-in style for Jekyll. You can see an example and view the open-source code in the [Minima repository](https://github.com/jekyll/minima)._
 
@@ -57,13 +59,15 @@ _Tip: The site template and layouts you are using are from a theme called Minima
 
 Your fork has the basic configuration to get a website built with Jekyll, but does not have any content in it. You need to create an index file to serve as the homepage of your website.
 
-1. Be sure you are in the  `docs` folder (the path should be `write-the-docs/docs`) and click `Create new file`.
+Markdown is a lightweight markup language that uses plain text with symbols, like asterisks and underscores, to style the appearance. You use markdown formatting throughout GitHub, and many files are in `.md` format. Two syntax references are from [John Gruber](https://daringfireball.net/projects/markdown/syntax), who created markdown, and [GitHub](https://guides.github.com/features/mastering-markdown/). Jekyll converts markdown files into HTML for use on a website.
+
+1. Be sure you are in the `docs` folder (the path should be `write-the-docs/docs`) and click `Create new file`.
 
   ![Create new file button](images/create-new-file-button.png)
 
-2. In the `Name your file` box, type `index.md`. This creates a new markdown file. It is very important that you include the `.md` file extension in the name; otherwise, your website will not be generated.
+2. In the `Name your file` box, type `index.md`. It is very important that you include the `.md` file extension in the name; otherwise, your website will not be generated.
   _Tip: If you ever need to create a new subfolder in your directory structure, you can type the folder name and a `/` after it, and then the filename._
-3. On the `Edit new file` tab, add the following text.
+3. On the `Edit new file` tab, add all the following text.
   ```
   ---
   layout: default
@@ -75,18 +79,20 @@ Your fork has the basic configuration to get a website built with Jekyll, but do
 
 The text between the two lines of hyphens (`---`) is metadata, known as front matter, that Jekyll processes to display the page. You can use variables and other options in the front matter to customize your site.
 
-In this tutorial, you are setting the page layout and giving the page a title. The content that comes after this is what is displayed on your page (Hello, world!).
+You are setting the page layout and giving the page a title. The content that comes after this is what is displayed on your page (Hello, world!).
 
 ## Open a pull request for your edits
 
-In GitHub, a _[pull request](https://help.github.com/articles/about-pull-requests/)_ is the way you propose your changes to a project.
+In GitHub, a _[pull request](https://help.github.com/articles/about-pull-requests/)_ is the way you propose changes to a project.
 
 You can think of the _master branch_ as being the production version of your project. It is good practice to create a pull request for your changes, rather than committing directly into the master branch. With a pull request, other people can review and verify your changes, making it less likely that you will introduce a problem that could destabilize the project. It is also easier to revert a change if it originated from a pull request.
 
+Review the [GitHub Flow](https://guides.github.com/introduction/flow/) documentation for more information on this process.
+
 1. Scroll to the `Commit new file` section of the page.
-2. In the first box, type `Create website index file`. This is a commit message, which is useful for explaining your work and helps you keep track of the changes. If you do not add any text, GitHub includes a default message.
-3. Click `Create a new branch for this commit and start a pull request.`
-4. GitHub automatically suggests a branch name based on your username. You can use it or type your own, such as `new-index-file`.
+2. In the first box, type `Create website index file`. This is a commit message, where you can explain your work and helps you keep track of the changes. If you do not add any text, GitHub includes a default message.
+3. Click `Create a new branch for this commit and start a pull request.` On this page, GitHub is combining three actions into one: committing your changes, creating a branch for them, and starting a pull request.
+4. GitHub automatically suggests a branch name based on your username. You can use it or type your own, such as `new-index-file`. The branch name should be descriptive, and some organizations may have naming standards.
 
   ![Commit new file](images/index-file-commit-small.png)
 
@@ -99,15 +105,15 @@ You can think of the _master branch_ as being the production version of your pro
 7. Scroll the page and review the other information displayed on the pull request. For example, you can see the list of commits (there is only one) and the changes you made.
 8. Click `Create pull request`.
 
-_Tip: Repository administrators can restrict who can merge into the master branch or have settings to require approval from other contributors before merging. Because you are working in a repository in your own account, you technically have the ability to merge into the master branch. However, you should still follow the recommendation and create a pull request in your own projects._
+_Tip: Because you are working in a repository in your own account, you technically have the ability to commit directly into the master branch. However, you should still follow the recommendation and create a pull request for your own projects._
 
 ## Merge changes into the master branch
 
 You have opened a pull request in your repository, and now need to approve the changes and merge them into the master branch.
 
-Most of the time, other collaborators review and approve your pull request before you merge it. GitHub has [additional reviewing functionality](https://help.github.com/articles/about-pull-request-reviews/) , including adding comments on individual lines of code and requiring changes to be made before the pull request can be merged.
+Most of the time, other collaborators review and approve your pull request before it is merged. GitHub has [additional reviewing functionality](https://help.github.com/articles/about-pull-request-reviews/), including adding comments on individual lines of code and requiring changes to be made before the pull request can be merged. Administrators can also limit who can merge into the master branch.
 
-In this case, you are the only contributor and need to review your own changes.
+In this case, you are the only contributor to this repository and need to review and merge your own changes.
 
 1. Review the information on the pull request page.
 
@@ -117,9 +123,10 @@ In this case, you are the only contributor and need to review your own changes.
 
   ![Add a comment to a pull request](images/pull-request-add-comment-small.png)
 
-3. Click `Merge pull request`. Your changes do not conflict with the master branch, so you can merge automatically. If there were conflicts, you need to reconcile them by choosing whether to keep the master version or your edits. You may need to use command-line options to review and fix merge conflicts.
+3. Click `Merge pull request`.
+  Your changes are compatible and do not conflict with the master branch, so can be merged automatically. However, sometimes, when multiple people are editing the same part of a file, GitHub cannot determine which change is correct. If this happens, you may need to use [command-line options](https://help.github.com/articles/resolving-a-merge-conflict-from-the-command-line/) to review and reconcile merge conflicts.
 4. Click `Confirm merge`.
-5. Click `Delete branch` to remove the temporary branch you made to add the index file.
+5. Click `Delete branch` to remove the temporary branch.
 
   ![Delete the old branch](images/pull-request-delete-branch.png)
 
@@ -129,7 +136,7 @@ You have now merged your changes into the master branch, and the pull request st
 
 [GitHub Pages](https://help.github.com/articles/what-is-github-pages/) is a free website-hosting service for repositories stored on GitHub. You can use GitHub pages for a variety of projects, including your personal blog or a corporate website.
 
-To use GitHub Pages, you need to specify the source of the files used to build the website. In the simplest workflow, you can publish the site from either of these sources:
+To use GitHub Pages, you need to specify the source of the files used to build the website. In the simplest workflow, you can publish the site from one of these two sources:
 
 - the entire master branch, which is useful if the repository only contains files used for the website
 - the contents of a folder named `docs` in the master branch
@@ -154,11 +161,13 @@ After the page loads, your should have a formatted website with one page, a head
 
 ## Add content to your page
 
-You are going to replace the "Hello, world!" text with real content. You can copy and paste text from a sample markdown file in this repository.
+You next can replace the "Hello, world!" text with real content. You can copy text from a sample markdown file in this repository and paste it into your index file.
 
 1. Go back to your GitHub repository.
 2. In the root level of the repository, find and open the file named [sample-text-for-website.md](https://github.com/rmglennon/write-the-docs/blob/master/sample-text-for-website.md).
 3. Click the `Raw` button to view the raw text, including the markdown formatting tags.
+2. In the root level of the repository, find and open the file named `sample-text-for-website.md`.
+3. Click the `Raw` button to view the plain text, including the markdown formatting.
 
   ![View the raw file content](images/raw-button.png)
 
@@ -169,23 +178,25 @@ You are going to replace the "Hello, world!" text with real content. You can cop
   ![Start editing the file](images/edit-this-text-button.png)
 
 7. Delete the "Hello, world!" text, making sure to leave in place the front matter section above it.
-8. Paste the text you copied.
+8. Paste the text you copied after the second `---` line.
 9. Following the same workflow you did before, commit your changes into a new branch and start a pull request.
 10. Open the pull request, merge your changes into the master branch, and delete the temporary branch.
 11. Refresh your website to see your changes.
 
-_Tip: If you have closed the browser tab with your GitHub Pages website, you can go back to your repository settings and find the link to the site there._
+_Tip: If you closed the browser tab with your GitHub Pages website, you can go back to your repository settings and find the link to the site there._
+
+Your basic website is complete.
 
 ## Next steps
 
 ### Enhance your website
 
-Your basic website is complete. On your own, here are some of the tasks you can do to continue enhancing it.
+On your own, here are some of the tasks you can do to continue enhancing your site.
 
 1. Add more pages to your website.
   - Files you add in the `docs` folder will be at a URL that matches the file name. For example, `about.md` will display at `/about`.
   - Add a blog to your site by creating a `_posts` folder in the `docs` folder. By default, files should be named `YYYY-MM-DD-my-new-post.md`, where YYYY-MM-DD is the year, month, and day it is posted and the file name. This shows up on your site at a URL similar to `YYYY/MM/DD/my-new-post`.
-2. Customize the site configuration.
+2. Customize the site configuration in `_config.yml`.
 3. Experiment with other themes, including the automatic site generation tools under the repository settings.
 4. Make a local copy of the repository and use the command-line interface to modify the files.
 
@@ -195,8 +206,8 @@ _Tip: If you want to remove your GitHub Pages site or delete the repository, ope
 
 Now that you are familiar with using GitHub, you can use this same workflow to collaborate on the many open-source projects that are hosted there.
 
-Documentation can be an easy way to get started contributing to a project. For example, if you find a typographic error in a documentation page and can locate the source file, you can suggest a fix and become a contributor to the project. In fact, if you click the `Edit this file` button, GitHub automatically creates a fork that you can edit and opens a pull request on the original project.
+Documentation can be an easy way to get started contributing to a project. For example, if you find a typographic error on a documentation page, you can fork the repository and suggest a fix. In fact, if you click the `Edit this file` button on the file you want to change, GitHub automatically creates a fork for you and opens a pull request on the original project.
 
-If you find a bug or have suggestions for a project but are unable or do not want to make them yourself, report an _issue_ in the repository to notify the contributors. You can also use the issues list to find known problems that you may be able to fix, which are often tagged with `help wanted`.
+If you find a bug or have suggestions for a project but are unable or do not want to fix them yourself, report an _issue_ in the repository to notify the contributors. You can also use the issues list to find known problems that you may be able to assist with, which are sometimes tagged with `help wanted`.
 
-GitHub repositories often contain [guidelines for contributing](https://help.github.com/articles/setting-guidelines-for-repository-contributors/) to the project, including how to format your pull request and the code of conduct. Review and follow these instructions to help maintain a positive open-source community.
+GitHub repositories often contain [guidelines for contributing](https://help.github.com/articles/setting-guidelines-for-repository-contributors/) to the project, including how to format your pull request and the code of conduct. Be sure to review and follow these instructions to help maintain a positive open-source community.

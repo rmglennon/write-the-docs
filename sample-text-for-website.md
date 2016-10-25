@@ -2,9 +2,13 @@
 
 ## Basic terminology
 
-You can think of a _repository_ as the folder for a project, which contains all of the component files, such as code, documentation, and examples. Open-source software uses public repositories that are visible on the GitHub website.
+You can think of a Git _repository_ as the folder for your project that contains all the component files, such as code, documentation, and examples. You can store your repositories on GitHub, where they can be publicly visible (open source) or be private and only accessible to certain users.
 
-To work on a project, you need to make your own _branch_ of a repository, which is a parallel version that contains your changes. When you are done working, you can propose that your changes be added into the main, or _master branch_ of the project by opening a _pull request_. Other _collaborators_ who have write access to the project can review and approve your work.
+When you start working on a project, you need to make your own _branch_ of a repository, which is a parallel version that contains your changes. As you make modifications, like adding or deleting lines of code or files, you save, or _commit_, your changes.
+
+To propose integrating your commits into the production version of the project, known as the _master branch_, you open a _pull request_. A pull request is the way you start a discussion with others about your changes. Other _collaborators_ on the project can review and approve your work. After your pull request is _merged_, your changes are added to the master branch.
+
+You can review the [GitHub Glossary](https://help.github.com/articles/github-glossary/) to learn more about common terms.
 
 ## General workflow for making a website with GitHub Pages
 
@@ -17,49 +21,3 @@ You can follow these general instructions to make a website with GitHub Pages.
 4. Merge files into the master branch.
 5. Go to the repository settings and enable GitHub Pages on the master branch.
 6. Open browser to the page.
-
-## Common markdown examples
-
-`#` for headings.
-
-Backticks around inline `code`.
-
-Two `**` **asterisks** around bold text.
-
-Add `_` _underscores_ for italics.
-
-### List examples
-
-Put items in an unordered list with hyphens, asterisks, or plus signs.
-
-```
-- Item 1
-- Item 2
-```
-
-Displays like this:
-
-- Item 1
-- Item 2
-
-Use a number with a period for ordered list items. You could use `1.` for all and they will display properly on the output.
-
-```
-1. Item 1
-1. Item 2
-```
-
-Displays like this:
-
-1. Item 1
-1. Item 2
-
-### Links and images examples
-
-`[Text that displays in the link](https://github.com)` looks like [Text that displays in the link](https://github.com).
-
-To add an image:
-
-`![alt text for image](https://octodex.github.com/images/collabocats.jpg)` looks like
-
-![alt text for image](https://octodex.github.com/images/collabocats.jpg)
