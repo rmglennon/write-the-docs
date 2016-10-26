@@ -22,7 +22,7 @@ You can think of a Git _repository_ as the folder for your project that contains
 
 When you start working on a project, you need to make your own _branch_ of a repository, which is a parallel version that contains your changes. As you make modifications, like adding or deleting lines of code or files, you save, or _commit_, your changes.
 
-To propose integrating your commits into the production version of the project, known as the _master branch_, you open a _pull request_. A pull request is the way you start a discussion with others about your changes. Other _collaborators_ on the project can review and approve your work. After your pull request is _merged_, your changes are added to the master branch.
+To propose integrating your commits into the production version of the project, known as the _master branch_, you open a _pull request_. A pull request is the way you start a discussion with others about your changes because you want them pulled into the master branch. Other _collaborators_ on the project can review and approve your work. After your pull request is _merged_, your changes are added to the master branch.
 
 You can review the [GitHub Glossary](https://help.github.com/articles/github-glossary/) to learn more about common terms.
 
@@ -31,7 +31,7 @@ You can review the [GitHub Glossary](https://help.github.com/articles/github-glo
 To get started, you need to make a copy of the repository containing the tutorial data files. You do not have write permissions the source version, but making a copy into your own GitHub account allows you to edit them. This is known as creating a _fork_, or _forking a repository_.
 
 1. Open a browser to https://github.com and sign in with your account.
-2. Navigate to https://github.com/rmglennon/write-the-docs, which contains some files to get you started.
+2. Navigate to https://github.com/mapzen/write-the-docs, which contains some files to get you started.
 4. Click the `Fork` button in the top right corner of the page.
 
   ![Fork a repository button](images/fork-repo-button.png)
@@ -40,18 +40,18 @@ To get started, you need to make a copy of the repository containing the tutoria
 
 You now have a copy of the repository that you can edit. If you look at the repository name, it shows the name of the source repository from which it was forked.
 
-_Tip: Sometimes, you may want to download a copy of a repository to your local machine. Doing this allows you to work offline, use more sophisticated editing tools, such as a text editor or integrated development environment, and work with git through a [command-line interface](https://git-scm.com/book/en/v2/Getting-Started-The-Command-Line). These workflows are beyond the scope of the tutorial._
+_Tip: You can download a copy of a repository to your local machine. Doing this allows you to work offline, use more sophisticated editing tools, such as a text editor or integrated development environment, and work with git through a [command-line interface](https://git-scm.com/book/en/v2/Getting-Started-The-Command-Line). These workflows are beyond the scope of the tutorial._
 
 ## Explore the files
 
-The files provided for the tutorial include information about the repository's license, some markdown documents, and a `docs` folder.
+The files provided for the tutorial include information about the repository's license, some markdown documents, and a `docs` folder. You are going to create a web page from the contents of the `docs` folder.
 
 1. Look at the files in your forked repository.
 2. Click the `docs` folder to display its contents. It contains a `css` folder, which imports a visual theme for the website you will create, and `_config.yml` to set up the website.
 
   ![Files in the repository](images/repo-files-css-config.png)
 
-The files currently in the `docs` folder are used with [Jekyll](https://jekyllrb.com/), a software library written in Ruby that converts text files, such as the markdown files you see here, into a static website or blog. Jekyll is very flexible, and you can [review the documentation](https://jekyllrb.com/docs/home/) to learn more about how to customize it for your site. [GitHub Pages](https://pages.github.com/), which the free website hosting service you are using in this tutorial, is powered by Jekyll.
+These files are used with [Jekyll](https://jekyllrb.com/), a software library written in Ruby that converts text files, such as the markdown files you see here, into a static website or blog. Jekyll is very flexible, and you can [review the documentation](https://jekyllrb.com/docs/home/) to learn more about how to customize it for your site. [GitHub Pages](https://pages.github.com/), which the free website hosting service you are using in this tutorial, is powered by Jekyll.
 
 _Tip: The site template and layouts you are using are from a theme called Minima, which is the built-in style for Jekyll. You can see an example and view the open-source code in the [Minima repository](https://github.com/jekyll/minima)._
 
@@ -84,15 +84,21 @@ You are setting the page layout and giving the page a title. The content that co
 
 ## Open a pull request for your edits
 
-In GitHub, a _[pull request](https://help.github.com/articles/about-pull-requests/)_ is the way you propose changes to a project.
+Git is referred to as a _distributed version control system_. While you are working on your changes, other people can be simultaneously editing in their own copies, or _branches_, of the repository. With this decentralized model, multiple people can work on different parts of a project without interfering with each other.
 
-You can think of the _master branch_ as being the production version of your project. It is good practice to create a pull request for your changes, rather than committing directly into the master branch. With a pull request, other people can review and verify your changes, making it less likely that you will introduce a problem that could destabilize the project. It is also easier to revert a change if it originated from a pull request.
+In GitHub, a _[pull request](https://help.github.com/articles/about-pull-requests/)_ is the way you propose changes to a project. It is called a pull request because you are asking to have your modifications be pulled into the main or production version of the repository, known as the _master branch_.
 
-Review the [GitHub Flow](https://guides.github.com/introduction/flow/) documentation for more information on this process.
+It is always good practice to create a branch and a pull request for your changes, rather than saving (known as _committing_) them directly to the master branch. With a pull request, other people can review and verify your changes, making it less likely that you will introduce a problem that could destabilize the project. In addition, if you commit straight to the master, others may not know about your modifications until they attempt to merge their own changes and unexpectedly find conflicting edits. It is also easier to revert a change if it originated from a pull request.
+
+Review the [GitHub Flow](https://guides.github.com/introduction/flow/) documentation for more information and diagrams of the branching and merging process.
+
+_Tip: You can click Graphs > Network or the number next to the Fork button, to view a timeline schematic of the branching and merging that has occurred in a repository._
 
 1. Scroll to the `Commit new file` section of the page.
-2. In the first box, type `Create website index file`. This is a commit message, where you can explain your work and helps you keep track of the changes. If you do not add any text, GitHub includes a default message.
-3. Click `Create a new branch for this commit and start a pull request.` On this page, GitHub is combining three actions into one: committing your changes, creating a branch for them, and starting a pull request.
+2. In the first box, type `Create website index file`.
+  This is a commit message, where you can explain your work. Providing a descriptive and meaningful message is important so you and others are able to know what is happening in this group of edits and be able to refer back to them in the future. If you do not add any text, GitHub includes a default message.
+3. Click `Create a new branch for this commit and start a pull request.` On this page, GitHub is combining three actions into one: creating a branch for your changes, committing your them to the branch, and starting a pull request.
+  _Tip: When you are making more complex edits, you may want to create a branch from the Branch menu and reuse the branch for multiple commits._
 4. GitHub automatically suggests a branch name based on your username. You can use it or type your own, such as `new-index-file`. The branch name should be descriptive, and some organizations may have naming standards.
 
   ![Commit new file](images/index-file-commit-small.png)
@@ -131,7 +137,7 @@ In this case, you are the only contributor to this repository and need to review
 
   ![Delete the old branch](images/pull-request-delete-branch.png)
 
-You have now merged your changes into the master branch, and the pull request status shows as `Merged`. Congratulations if this was your first pull request!
+You have now merged your changes into the master branch, and the pull request status shows as `Merged`. Congratulations if this is your first pull request!
 
 ## Enable GitHub Pages on the repository
 
@@ -159,6 +165,8 @@ The option to use the `docs` folder, which is what you will be doing, allows you
 8. Click the URL to view your website (you may want to open it in a new browser tab). If you get a 404 error, keep trying because it may take a few minutes to generate the site.
 
 After the page loads, your should have a formatted website with one page, a header and footer (this comes from the settings in `_config.yml`), and the "Hello, world!" text you entered in the index file.
+
+_Tip: By default, the URL takes the form of `<username>.github.io/<repository>` name. If you have used GitHub Pages before and set up a custom domain name for the base URL, this is also reflected in this site._
 
 ## Add content to your page
 
@@ -197,7 +205,7 @@ On your own, here are some of the tasks you can do to continue enhancing your si
   - Add a blog to your site by creating a `_posts` folder in the `docs` folder. By default, files should be named `YYYY-MM-DD-my-new-post.md`, where YYYY-MM-DD is the year, month, and day it is posted and the file name. This shows up on your site at a URL similar to `YYYY/MM/DD/my-new-post`.
 2. Customize the site configuration in `_config.yml`.
 3. Experiment with other themes, including the automatic site generation tools under the repository settings.
-4. Make a local copy of the repository and use the command-line interface to modify the files.
+4. Make a local copy of the repository and learn how to use the command-line interface to modify the files.
 
 _Tip: If you want to remove your GitHub Pages site or delete the repository, open the repository settings._
 
