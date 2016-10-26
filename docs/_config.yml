@@ -1,6 +1,6 @@
 title: My website
 description: A website showing GitHub Pages
-# baseurl: "/url-test"
+baseurl: "/write-the-docs"
 
 # Build settings
 markdown: kramdown
