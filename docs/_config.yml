@@ -7,4 +7,4 @@ baseurl: "/write-the-docs"
 
 # Markdown parser and theme settings
 markdown: kramdown
-theme: minima
+theme: jekyll-theme-midnight
