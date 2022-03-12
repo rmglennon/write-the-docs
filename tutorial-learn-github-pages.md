@@ -228,4 +228,4 @@ Documentation can be an easy way to get started contributing to a project. For e
 
 If you find a bug or have suggestions for a project but are unable or do not want to fix them yourself, report an _issue_ in the repository to notify the contributors. You can also use the issues list to find known problems that you may be able to assist with, which are sometimes tagged with `help wanted`.
 
-GitHub repositories often contain [guidelines for contributing](https://help.github.com/articles/setting-guidelines-for-repository-contributors/) to the project, including how to format your pull request and the code of conduct. Be sure to review and follow these instructions to help maintain a positive open-source communit
+GitHub repositories often contain [guidelines for contributing](https://help.github.com/articles/setting-guidelines-for-repository-contributors/) to the project, including how to format your pull request and the code of conduct. Be sure to review and follow these instructions to help maintain a positive open-source communit.
