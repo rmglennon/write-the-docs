@@ -1,10 +1,10 @@
+# Metadata for the site header and footer
 title: My website
-description: A website showing GitHub Pages
+description: A website made with GitHub Pages
+
+# Set the production website URL when previewing
 baseurl: "/write-the-docs"
 
-# Build settings
+# Markdown parser and theme settings
 markdown: kramdown
 theme: minima
-
-exclude:
-- README.md
