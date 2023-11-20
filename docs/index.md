@@ -5,6 +5,9 @@ title: Home
 
 # My GitHub Pages site
 
+Cats doin' business
+![Curie & Leela punchin the clock](/images/gcat-7963.JPG)
+
 ## Basic terminology
 
 You can think of a Git _repository_ as the folder for your project that contains all the component files, such as code, documentation, and examples. You can store your repositories on GitHub, where they can be publicly visible (open source) or be private and only accessible to certain users.
