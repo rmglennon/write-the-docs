@@ -6,7 +6,7 @@ title: Home
 # My GitHub Pages site
 
 Cats doin' business
-![Curie & Leela punchin the clock](/images/gcat-7963.JPG)
+![Curie & Leela punchin the clock](./images/gcat-7963.JPG)
 
 ## Basic terminology
 
